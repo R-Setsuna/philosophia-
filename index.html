@@ -1,306 +1,137 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>外在的共鳴の哲学 | 公式サイト</title>
-<meta name="description" content="外在的共鳴の哲学 ― 世界との関係として立ち上がる存在と愛についての哲学体系。著作一覧、論文、叙事詩、実践的な応用までを収録。">
-<style>
-  :root {
-    --bg: #f7f7f5;
-    --fg: #222222;
-    --accent: #444444;
-    --line: #dddddd;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
-    color: var(--fg);
-    line-height: 1.8;
-  }
-  header {
-    padding: 24px 20px;
-    border-bottom: 1px solid var(--line);
-    background: #ffffff;
-  }
-  .site-title {
-    font-size: 1.8rem;
-    margin: 0 0 4px;
-  }
-  .site-subtitle {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #666;
-  }
-  nav {
-    margin-top: 12px;
-    font-size: 0.95rem;
-  }
-  nav a {
-    margin-right: 16px;
-    text-decoration: none;
-    color: var(--accent);
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-  main {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 24px 16px 60px;
-  }
-  section {
-    margin-bottom: 48px;
-  }
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.6rem;
-    border-left: 6px solid var(--accent);
-    padding-left: 10px;
-  }
-  h3 {
-    font-size: 1.1rem;
-    margin-top: 1.6rem;
-    margin-bottom: 0.4rem;
-  }
-  p {
-    margin: 0 0 0.8rem;
-  }
-  .lead {
-    font-size: 1.05rem;
-  }
-  .note {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    background: #ffffff;
-  }
-  th, td {
-    border: 1px solid var(--line);
-    padding: 6px 8px;
-    font-size: 0.9rem;
-    text-align: left;
-  }
-  th {
-    background: #f0f0f0;
-  }
-  tr:nth-child(even) {
-    background: #fafafa;
-  }
-  footer {
-    border-top: 1px solid var(--line);
-    padding: 16px 20px;
-    font-size: 0.8rem;
-    color: #777;
-    text-align: center;
-    background: #ffffff;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>外在的共鳴の哲学 – R. Setsuna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --fg-soft: #555555;
+      --rule: #e5e5e5;
+      --accent: #4a90e2;
+      --font-main: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      --font-mono: "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .brand {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      color: var(--fg-soft);
+      margin-bottom: 16px;
+    }
+
+    .hero-emblem {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 28px;
+      opacity: 0.9;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin: 0 0 12px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--fg-soft);
+      line-height: 1.7;
+      max-width: 32em;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-top: 48px;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      color: var(--fg);
+      text-decoration: none;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+      transition: 0.25s ease;
+      letter-spacing: 0.05em;
+    }
+
+    nav a:hover {
+      border-bottom: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 60px 0 40px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      font-size: 0.75rem;
+      color: var(--fg-soft);
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-
-<header>
-  <h1 class="site-title">外在的共鳴の哲学</h1>
-  <p class="site-subtitle">― 世界の外からではなく、「あいだ」として響き合う存在の哲学体系 ―</p>
-  <nav>
-    <a href="#about">哲学とは</a>
-    <a href="#works">著作一覧</a>
-    <a href="#papers">論文</a>
-    <a href="#epic">叙事詩</a>
-    <a href="#contact">連絡・情報</a>
-  </nav>
-</header>
-
 <main>
 
-  <!-- 概要 -->
-  <section id="about">
-    <h2>外在的共鳴の哲学とは</h2>
-    <p class="lead">
-      「外在的共鳴の哲学」は、主体の内側からではなく、<br>
-      他者・世界・出来事との「あいだ」に生じる響きとして、<br>
-      存在・愛・幸福・世界を捉え直す試みです。
-    </p>
-    <p>
-      内面の充足や自己完結ではなく、<br>
-      外部との関係のなかで立ち上がる「生」のかたちを、<br>
-      叙事詩・哲学書・論文・実践書を通じて、多層的に記述しています。
-    </p>
-    <p class="note">
-      ※ 本サイトは、著者による公式アーカイブとして、<br>
-      作品・論文・関連資料を透明に整理し、誰でも辿れるようにすることを目的としています。
-    </p>
-  </section>
+  <header>
+    <div class="brand">EXTERNAL RESONANCE</div>
 
-  <!-- 著作一覧（哲学書） -->
-  <section id="works">
-    <h2>哲学書</h2>
-    <p>外在的共鳴の哲学を体系的に読むための中心的な書籍群です。</p>
+    <!-- エンブレム画像 -->
+    <img src="emblem.png" alt="Emblem" class="hero-emblem">
 
-    <table>
-      <thead>
-        <tr>
-          <th>番号</th><th>書籍名</th><th>言語</th><th>楽天Kobo</th><th>Google Play Books</th><th>Zenodo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>風が名前を呼んだ日</td>
-          <td>JPN, USA</td>
-          <td>JPN, USA</td>
-          <td>JPN</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>外在的共鳴の哲学入門</td>
-          <td>JPN, USA</td>
-          <td>JPN, USA</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>外在的共鳴の哲学体系</td>
-          <td>JPN, USA</td>
-          <td>JPN, USA</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- 論文 -->
-  <section id="papers">
-    <h2>論文・学術的テキスト</h2>
-    <p>哲学体系の中核概念を、論文形式で展開したテキストです。</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>番号</th><th>タイトル</th><th>言語</th><th>掲載・配布</th><th>Zenodo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>The Philosophy of External Resonance</td>
-          <td>USA</td>
-          <td>―</td>
-          <td>USA</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>外在的共鳴の哲学</td>
-          <td>JPN</td>
-          <td>―</td>
-          <td>JPN</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>外在的共鳴の幸福論</td>
-          <td>JPN, USA</td>
-          <td>JPN, USA</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>外在的共鳴の存在論</td>
-          <td>JPN, USA</td>
-          <td>JPN, USA</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>外在的共鳴の世界論</td>
-          <td>JPN, USA</td>
-          <td>JPN, USA</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- 叙事詩 -->
-  <section id="epic">
-    <h2>叙事詩・物語作品</h2>
-    <p>
-      外在的共鳴の哲学は、概念だけでなく、<br>
-      叙事詩・物語としても展開されています。<br>
-      ここでは、その一部を一覧として示します。
+    <h1>R. Setsunaの公式ホームページ</h1>
+    <p class="subtitle">
+      外の風　内に響きて　たち返り<br>
+      　　　　風となりては　外へ吹きゆく
     </p>
 
-    <h3>叙事詩</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>番号</th><th>書籍名</th><th>言語</th><th>楽天Kobo</th><th>Google Play Books</th><th>Zenodo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>火の声と沈黙の詩</td><td>10言語</td><td>JPN,USA,DEU,FRA,ESP,PRT,ITA,NLD,TUR,GBR</td><td></td><td></td></tr>
-        <tr><td>2</td><td>天使の沈黙の下で</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>3</td><td>朧月の宮記</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>4</td><td>イデアの想起</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>5</td><td>存在の地平</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>6</td><td>永遠の現在を生きる者</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>7</td><td>内的実存の極</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>8</td><td>重力と恩寵のあいだに立つ魂</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>9</td><td>光点の誕生</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>10</td><td>永遠の持続を歩む者</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>11</td><td>言語の外側を探す旅</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>12</td><td>永遠の相の下で見る者</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>13</td><td>帝国と砂漠</td><td>JPN</td><td>JPN</td><td></td><td></td></tr>
-        <tr><td>14</td><td>Resonantia Wind</td><td>USA</td><td>USA</td><td></td><td></td></tr>
-      </tbody>
-    </table>
+    <nav>
+      <a href="Greeting.html">ご挨拶</a>
+      <a href="works.html">著者自身の著書一覧</a>
+      <a href="profile.html">著者プロフィール</a>
+    </nav>
+  </header>
 
-    <h3>関連する実践書・恋愛・料理</h3>
-    <p class="note">
-      哲学の応用としての「料理」「恋愛」など、生活と実践に関わる書籍も含まれます。
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th>区分</th><th>番号</th><th>書籍名</th><th>言語</th><th>楽天Kobo</th><th>Google Play Books</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>料理</td><td>1</td><td>料理から自由になる</td><td>10言語</td><td>JPN,USA</td><td></td></tr>
-        <tr><td>恋愛</td><td>1</td><td>愛は、ふと立ち上がり、ふと世界を変える</td><td>10言語</td><td></td><td></td></tr>
-      </tbody>
-    </table>
-  </section>
+  <hr class="divider">
 
-  <!-- 連絡・情報 -->
-  <section id="contact">
-    <h2>連絡・情報</h2>
-    <p>
-      本サイトに掲載されている著作・論文・テキストは、<br>
-      著者による公式な整理・公開を目的としています。<br>
-      出版・翻訳・引用などに関するお問い合わせは、今後設置予定の連絡先、<br>
-      もしくは各プラットフォーム（楽天Kobo / Google Play Books / Zenodo 等）を通じて行ってください。
-    </p>
-    <p class="note">
-      ※ ここにメールアドレスや問い合わせフォームへのリンクを後から追加できます。
-    </p>
-  </section>
+  <footer>
+    © R. Setsuna Publishing. All Rights Reserved.
+  </footer>
 
 </main>
-
-<footer>
-  &copy; 外在的共鳴の哲学 / Official Site
-</footer>
-
 </body>
 </html>

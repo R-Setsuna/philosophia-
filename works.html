@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>外在的共鳴体系 – 著者自身の著書一覧</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #ffffff;            /* 背景を白に変更 */
+      --fg: #1a1a1a;            /* 文字色を濃いグレー（黒すぎない色）に */
+      --fg-soft: #666666;       /* サブテキストの色 */
+      --accent: #0077cc;        /* アクセントカラーを視認性の良い青に */
+      --rule: #eeeeee;          /* 区切り線の色 */
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Hiragino Sans", "Noto Sans JP", sans-serif;
+      --font-mono: "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);    /* グラデーションを削除し、白一色に */
+      color: var(--fg);
+      font-family: var(--font-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    main {
+      width: 100%;
+      max-width: 960px;
+      padding: 48px 20px 64px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 40px;
+     text-align: center; /* 左寄せから中央寄せに変更 */ 
+    }
+
+    .brand {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fg-soft);
+      margin-bottom: 12px;
+      /* 必要に応じて text-align: center; を追加（親要素で指定しているので自動で中央になります） */    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--fg-soft);
+      line-height: 1.7;
+      max-width: 34em;
+      margin-left: auto;  /* 左右の余白を自動にして中央へ */
+      margin-right: auto; /* 左右の余白を自動にして中央へ */
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 32px 0 28px;
+    }
+
+    section {
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f0f0f0; /* 線を明るい色に */    }
+
+    section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fg-soft);
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0 0 6px;
+    }
+
+    .section-note {
+      font-size: 0.85rem;
+      color: var(--fg-soft);
+      margin-bottom: 14px;
+    }
+
+    .work-group {
+      margin-bottom: 14px;
+    }
+
+    .work-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .work-main {
+      font-size: 0.98rem;
+      margin-bottom: 2px;
+    }
+
+    .work-main span.label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-right: 0.75em;
+      font-weight: 600; /* 白背景で見やすくするため少し太く */
+    }
+
+    .work-main span.title-jp {
+      font-weight: 500;
+    }
+
+    .work-translations {
+      font-size: 0.86rem;
+      color: var(--fg-soft);
+      line-height: 1.6;
+      padding-left: 1.9em;
+    }
+
+    .work-translations span.lang {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--fg-soft);
+      margin-right: 0.5em;
+      white-space: nowrap;
+    }
+
+    .work-translations div {
+      margin-bottom: 2px;
+    }
+
+    .work-translations div:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.75rem;
+      color: var(--fg-soft);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--rule);
+      padding-top: 14px;
+    }
+
+    footer .right {
+      text-align: right;
+      flex: 1;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 32px 16px 40px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      footer .right {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">EXTERNAL RESONANCE</div>
+    <h1>著者自身の著書一覧</h1>
+    <p class="subtitle">
+      外在的共鳴体系の全体像をかたちづくる、原論・哲学書・独立研究論文・音楽理論・エッセイ・叙事詩群。
+      本ページは、その一覧のみを静かに掲げるための入口です。
+    </p>
+  </header>
+
+  <hr class="divider">
+
+  <!-- I. 原論 -->
+  <section>
+    <div class="section-label">I. 原論（Zenodo）</div>
+    <h2>外在的共鳴体系の中心となる原理的論文。</h2>
+    <p class="section-note">原理としての一点から、全体系が放射される。</p>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の哲学</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Philosophy of External Resonance</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- II. 哲学書 -->
+  <section>
+    <div class="section-label">II. 哲学書（出版）</div>
+    <h2>外在的共鳴の哲学的展開を示す主要三部作。</h2>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">風が名前を呼んだ日</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Day the Wind Spoke My Name</div>
+        <div><span class="lang">DEU</span>Der Tag, an dem der Wind meinen Namen rief</div>
+        <div><span class="lang">FRA</span>Le jour où le vent a appelé mon nom</div>
+        <div><span class="lang">ESP</span>El día que el viento llamó mi nombre</div>
+        <div><span class="lang">ITA</span>Il giorno in cui il vento pronunciò il nome</div>
+        <div><span class="lang">SWE</span>Dagen då vinden sade mitt namn</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の哲学入門</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Introduction to the Philosophy of External Resonance</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の哲学体系</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The System of the Philosophy of External Resonance</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- III. 独立研究論文 -->
+  <section>
+    <div class="section-label">III. 独立研究論文（出版）</div>
+    <h2>外在的共鳴の各領域を深める専門的研究。</h2>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の幸福論</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Theory of Happiness in External Resonance</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の存在論</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Ontology of External Resonance</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の世界論</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The World Theory of External Resonance</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の自然科学論</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>External Resonance in Natural Science</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の無意識論</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Theory of the Unconscious in External Resonance</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の人生論</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Life Theory of External Resonance</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の感情論</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>External Resonance Theory of Emotion</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴の芸術論</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Art Theory of External Resonance</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IV. 音楽理論 -->
+  <section>
+    <div class="section-label">IV. 音楽理論（出版）</div>
+    <h2>外在的共鳴の応用としての音楽理論。</h2>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">外在的共鳴としての音楽理論の基礎構造</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Fundamental Structure of Musical Theory as External Resonance</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- V. エッセイ -->
+  <section>
+    <div class="section-label">V. エッセイ（出版）</div>
+    <h2>生活・愛・日常の中に現れる外在的共鳴。</h2>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">料理から自由になる</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>FREE YOURSELF FROM COOKING</div>
+        <div><span class="lang">DEU</span>FREI WERDEN VOM KOCHEN</div>
+        <div><span class="lang">FRA</span>SE LIBÉRER DE LA CUISINE</div>
+        <div><span class="lang">ESP</span>LIBERARTE DE LA COCINA</div>
+        <div><span class="lang">ITA</span>LIBERTAR-SE DA COZINHA</div>
+        <div><span class="lang">PRT</span>VRIJ WORDEN VAN KOKEN</div>
+        <div><span class="lang">NLD</span>VRIJ WORDEN VAN KOKEN</div>
+        <div><span class="lang">TUR</span>YEMEK YAPMAKTAN ÖZGÜRLEŞMEK</div>
+        <div><span class="lang">GBR</span>FREE YOURSELF FROM COOKING</div>
+        <div><span class="lang">SWE</span>BEFRIA DIG FRÅN MATLAGNING（未着手）</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">愛は、ふと立ち上がり、ふと世界を変える</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>Love Rises Suddenly and Quietly Changes the World</div>
+        <div><span class="lang">DEU</span>Die Liebe erhebt sich im Vorübergehen – und verwandelt im Vorübergehen die Welt</div>
+        <div><span class="lang">FRA</span>L’amour se lève soudain, et soudain transforme le monde</div>
+        <div><span class="lang">ESP</span>El amor se alza de pronto y, de pronto, transforma el mundo</div>
+        <div><span class="lang">ITA</span>L’amore si alza all’improvviso e, all’improvviso, trasforma il mondo.</div>
+        <div><span class="lang">PRT</span>O amor se ergue de repente e, de repente, transforma o mundo</div>
+        <div><span class="lang">NLD</span>De liefde staat plots op en verandert onverwacht de wereld</div>
+        <div><span class="lang">TUR</span>Aşk, bir anlığına yükselir ve bir anlığına dünyayı değiştirir</div>
+        <div><span class="lang">GBR</span>Love Rises Suddenly and Quietly Changes the World</div>
+        <div><span class="lang">SWE</span>Kärleken reser sig plötsligt och förändrar världen plötsligt.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VI. 叙事詩・文学作品 -->
+  <section>
+    <div class="section-label">VI. 叙事詩・文学作品（出版）</div>
+    <h2>外在的共鳴の文学的外化としての叙事詩群。</h2>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">火の声と沈黙の詩</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>The Voice of Fire and the Poem of Silence</div>
+        <div><span class="lang">DEU</span>Die Stimme des Feuers und das Gedicht der Stille</div>
+        <div><span class="lang">FRA</span>La Voix du Feu et le Poème du Silence</div>
+        <div><span class="lang">ESP</span>La Voz del Fuego y el Poema del Silencio</div>
+        <div><span class="lang">ITA</span>La Voce del Fuoco e il Poema del Silenzio</div>
+        <div><span class="lang">PRT</span>A Voz do Fogo e o Poema do Silêncio</div>
+        <div><span class="lang">NLD</span>De Stem van het Vuur en het Gedicht van de Stilte</div>
+        <div><span class="lang">TUR</span>Ateşin Sesi ve Sessizliğin Şiiri</div>
+        <div><span class="lang">GBR</span>The Voice of Fire and the Poem of Silence</div>
+      </div>
+    </div>
+
+    <div class="work-group">
+      <div class="work-main">
+        <span class="label">JPN</span>
+        <span class="title-jp">レゾナンティアの風（未着手）</span>
+      </div>
+      <div class="work-translations">
+        <div><span class="lang">USA</span>Resonantia Wind</div>
+      </div>
+    </div>
+
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">天使の沈黙の下で</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">朧月の宮記</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">イデアの想起</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">存在の地平</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">永遠の現在を生きる者</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">内的実存の極</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">重力と恩寵のあいだに立つ魂</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">光点の誕生</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">永遠の持続を歩む者</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">言語の外側を探す旅</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">永遠の相の下で見る者</span></div></div>
+    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">帝国と砂漠</span></div></div>
+  </section>
+
+  <footer>
+    <div class="left">
+      以上、著者自身の著書一覧。
+    </div>
+    <div class="right">
+      © R. Setsuna Publishing. All Rights Reserved.
+    </div>
+  </footer>
+</main>
+</body>
+</html>
