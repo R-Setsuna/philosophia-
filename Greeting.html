@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ご挨拶 – R. Setsuna</title>
+  <title>Greeting – R. Setsuna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #111111;
-      --fg-soft: #555555;
-      --rule: #e5e5e5;
-      --accent: #4a90e2;
-      --font-main: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
-      --font-mono: "SF Mono", Menlo, Consolas, monospace;
-    }
+
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --fg-soft: #555555;
+  --rule: #e5e5e5;
+  --accent: #4a90e2;
+  /* --font-main を以下のように変更 */
+  --font-main: "Georgia", "Times New Roman", "Hiragino Mincho ProN", "MS Mincho", serif;
+  --font-mono: "SF Mono", Menlo, Consolas, monospace;
+}
 
     body {
       margin: 0;
@@ -31,15 +33,18 @@
 
     header {
       margin-bottom: 48px;
-      text-align: center; /* left から center に変更 */    }
+      text-align: center;
+    }
 
-    .brand {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
+.brand {
+      /* フォントを Georgia に変更 */
+      font-family: "Georgia", serif; 
+      font-size: 0.85rem;
+      /* 字間を少し広げると、Georgia の優雅さが際立ちます */
+      letter-spacing: 0.2em; 
       color: var(--fg-soft);
-      margin-bottom: 12px;
-      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-transform: uppercase; /* ここは大文字のままの方が「ブランドロゴ」らしく見えます */
     }
 
     h1 {
@@ -53,11 +58,12 @@
       font-size: 0.95rem;
       color: var(--fg-soft);
       line-height: 1.7;
-      max-width: 32em;
-      /* 以下の3行を追加・修正 */
-      margin: 0 auto;       /* 左右の余白を自動にして中央へ */
-      text-align: center;   /* テキスト自体を中央揃えに */
-      display: block;      /* block要素として確実に認識させる */    }
+      max-width: 35em;
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+      font-style: italic;
+    }
 
     section {
       margin-bottom: 48px;
@@ -70,7 +76,7 @@
       color: var(--fg-soft);
       margin-bottom: 24px;
       text-align: justify;
-      word-break: break-all;
+      word-break: normal; /* 英語用に調整 */
     }
 
     footer {
@@ -89,64 +95,42 @@
 
   <header>
     <div class="brand">EXTERNAL RESONANCE</div>
-    <h1>ご挨拶</h1>
-    <p class="subtitle">― 生成の前景、あるいは外的作用の場として ―</p>
+    <h1>GREETING</h1>
+    <p class="subtitle">— As a Foreground of Becoming, or a Field of External Action —</p>
   </header>
 
   <section class="greeting">
     <p>
-      ここに開かれているのは、いかなる起源にも帰属しない、<br>
-      純粋な「外的作用の場」としての無名の領域です。<br>
-      外力と内的構造の差異は、対立項としてではなく、<br>
-      互いを生成し続ける不可逆の転移としてのみ現れます。
+      What unfolds here is an anonymous domain, a pure "field of external action" that belongs to no origin. The difference between external forces and internal structures does not appear as a pair of opposites, but only as an irreversible transition that continues to generate one another.
     </p>
 
     <p>
-      触れられる以前の境界は、すでに触れられた後の痕跡を孕み、<br>
-      痕跡は、なお触れられつつある外力の予兆として反転します。<br>
-      この往還は、主体と世界の二項を前提とせず、<br>
-      むしろ両者を成立させる以前の「中性の場」を、<br>
-      わずかな偏差として浮上させます。
+      Boundaries, before being touched, already contain the traces of having been touched, and these traces invert as omens of external forces still in the process of touching. This recursion does not assume the duality of subject and world; rather, it allows a "neutral field" that precedes both to emerge as a slight deviation.
     </p>
 
     <p>
-      ここに置かれた言葉は、意味の運搬体ではありません。<br>
-      意味が成立する以前の、構造の微細な歪み──<br>
-      差延し続ける生成の遅延そのもの──を、<br>
-      最小限の記述として留めようとする試みです。
+      The words placed here are not carriers of meaning. They are an attempt to capture, as a minimal description, the subtle distortions of structure before meaning is established—the very delay of becoming that continues to defer itself.
     </p>
 
     <p>
-      そして、この場の周縁に静かに配置された<br>
-      「著者自身の著書一覧」もまた、<br>
-      体系を提示するための目録ではなく、<br>
-      生成の連続体に刻まれた痕跡の一部として存在しています。<br>
-      それは、過去の固定化ではなく、<br>
-      外力との接触が残した複数の層が、<br>
-      時間の中でどのように変位してきたかを示す、<br>
-      ひとつの“偏差の地図”にすぎません。
+      The "Bibliography" quietly arranged at the periphery of this space is also not a catalog intended to present a system, but exists as part of the traces engraved upon the continuum of becoming. It is not a fixation of the past, but merely a "map of deviations" showing how the multiple layers left by contact with external forces have displaced themselves over time.
     </p>
 
     <p>
-      中心は設定されず、<br>
-      周縁も確定されず、<br>
-      ただ、連続的な変位の系列だけが、<br>
-      読者の内部に潜在する構造の層と交差する可能性を保持しています。
+      No center is established, no periphery is fixed; only a series of continuous displacements holds the possibility of intersecting with the latent structural layers within the reader.
     </p>
 
     <p>
-      もし、この場所のどこかが、<br>
-      あなたの経験の深層に沈む未分化の構造と共振するなら、<br>
-      その共振こそが、この場の唯一の実在となるでしょう。
+      If any part of this space resonates with the undifferentiated structures submerged in the depths of your experience, that resonance shall become the sole reality of this field.
     </p>
 
     <p>
-      ここでは、体系は提示されず、<br>
-      ただ、生成の前景だけが、静かに露わにされています。
+      No system is presented here; only the foreground of becoming is quietly laid bare.
     </p>
   </section>
 
   <footer>
+    <a href="index.html" style="color: var(--fg-soft); text-decoration: none;">Back to Home</a><br>
     © R. Setsuna Publishing. All Rights Reserved. 
   </footer>
 

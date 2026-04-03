@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>外在的共鳴体系 – 著者自身の著書一覧</title>
+  <title>External Resonance System – Complete List of Works by the Author</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --bg: #ffffff;            /* 背景を白に変更 */
-      --fg: #1a1a1a;            /* 文字色を濃いグレー（黒すぎない色）に */
-      --fg-soft: #666666;       /* サブテキストの色 */
-      --accent: #0077cc;        /* アクセントカラーを視認性の良い青に */
-      --rule: #eeeeee;          /* 区切り線の色 */
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   "Hiragino Sans", "Noto Sans JP", sans-serif;
-      --font-mono: "SF Mono", Menlo, Consolas, monospace;
-    }
+
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --fg-soft: #555555;
+  --rule: #e5e5e5;
+  --accent: #4a90e2;
+  /* --font-main を以下のように変更 */
+  --font-main: "Georgia", "Times New Roman", "Hiragino Mincho ProN", "MS Mincho", serif;
+  --font-mono: "SF Mono", Menlo, Consolas, monospace;
+}
 
     * {
       box-sizing: border-box;
@@ -48,14 +49,16 @@
      text-align: center; /* 左寄せから中央寄せに変更 */ 
     }
 
-    .brand {
-      font-family: var(--font-mono);
+.brand {
+      /* フォントを Georgia に変更 */
+      font-family: "Georgia", serif; 
       font-size: 0.85rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      /* 字間を少し広げると、Georgia の優雅さが際立ちます */
+      letter-spacing: 0.2em; 
       color: var(--fg-soft);
-      margin-bottom: 12px;
-      /* 必要に応じて text-align: center; を追加（親要素で指定しているので自動で中央になります） */    }
+      margin-bottom: 16px;
+      text-transform: uppercase; /* ここは大文字のままの方が「ブランドロゴ」らしく見えます */
+    }
 
     h1 {
       font-size: 1.9rem;
@@ -72,6 +75,7 @@
       max-width: 34em;
       margin-left: auto;  /* 左右の余白を自動にして中央へ */
       margin-right: auto; /* 左右の余白を自動にして中央へ */
+      font-style: italic;
     }
 
     .divider {
@@ -92,7 +96,7 @@
     }
 
     .section-label {
-      font-family: var(--font-mono);
+      font-family: Georgia, serif;
       font-size: 0.8rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -165,20 +169,12 @@
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
       font-size: 0.75rem;
       color: var(--fg-soft);
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      border-top: 1px solid var(--rule);
-      padding-top: 14px;
-    }
-
-    footer .right {
-      text-align: right;
-      flex: 1;
+      text-align: center;
     }
 
     @media (max-width: 640px) {
@@ -205,10 +201,10 @@
 <main>
   <header>
     <div class="brand">EXTERNAL RESONANCE</div>
-    <h1>著者自身の著書一覧</h1>
+    <h1>WORKS</h1>
     <p class="subtitle">
-      外在的共鳴体系の全体像をかたちづくる、原論・哲学書・独立研究論文・音楽理論・エッセイ・叙事詩群。
-      本ページは、その一覧のみを静かに掲げるための入口です。
+      The foundational treatise, the philosophical volumes, the independent research papers, the music theory, the essays, and the epic poems that together form the whole of the External Resonance System.
+This page serves simply as a quiet point of entry to their list.
     </p>
   </header>
 
@@ -216,16 +212,13 @@
 
   <!-- I. 原論 -->
   <section>
-    <div class="section-label">I. 原論（Zenodo）</div>
-    <h2>外在的共鳴体系の中心となる原理的論文。</h2>
-    <p class="section-note">原理としての一点から、全体系が放射される。</p>
+    <div class="section-label">I. Foundational Treatise (Zenodo)</div>
+    <h2>The principal theoretical paper at the core of the External Resonance System.</h2>
+    <p class="section-note">From a single point as principle, the entire system radiates.</p>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の哲学</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の哲学</div>
         <div><span class="lang">USA</span>The Philosophy of External Resonance</div>
       </div>
     </div>
@@ -233,15 +226,12 @@
 
   <!-- II. 哲学書 -->
   <section>
-    <div class="section-label">II. 哲学書（出版）</div>
-    <h2>外在的共鳴の哲学的展開を示す主要三部作。</h2>
+    <div class="section-label">II. Philosophical Works (Published)</div>
+    <h2>The principal trilogy that presents the philosophical development of External Resonance.</h2>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">風が名前を呼んだ日</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>風が名前を呼んだ日</div>
         <div><span class="lang">USA</span>The Day the Wind Spoke My Name</div>
         <div><span class="lang">DEU</span>Der Tag, an dem der Wind meinen Namen rief</div>
         <div><span class="lang">FRA</span>Le jour où le vent a appelé mon nom</div>
@@ -252,21 +242,15 @@
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の哲学入門</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の哲学入門</div>
         <div><span class="lang">USA</span>The Introduction to the Philosophy of External Resonance</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の哲学体系</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の哲学体系</div>
         <div><span class="lang">USA</span>The System of the Philosophy of External Resonance</div>
       </div>
     </div>
@@ -274,85 +258,61 @@
 
   <!-- III. 独立研究論文 -->
   <section>
-    <div class="section-label">III. 独立研究論文（出版）</div>
-    <h2>外在的共鳴の各領域を深める専門的研究。</h2>
+    <div class="section-label">III. Independent Research Papers (Published)</div>
+    <h2>The specialized studies that deepen each domain of External Resonance.</h2>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の幸福論</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の幸福論</div>
         <div><span class="lang">USA</span>The Theory of Happiness in External Resonance</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の存在論</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の存在論</div>
         <div><span class="lang">USA</span>The Ontology of External Resonance</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の世界論</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の世界論</div>
         <div><span class="lang">USA</span>The World Theory of External Resonance</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の自然科学論</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の自然科学論</div>
         <div><span class="lang">USA</span>External Resonance in Natural Science</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の無意識論</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の無意識論</div>
         <div><span class="lang">USA</span>The Theory of the Unconscious in External Resonance</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の人生論</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の人生論</div>
         <div><span class="lang">USA</span>The Life Theory of External Resonance</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の感情論</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の感情論</div>
         <div><span class="lang">USA</span>External Resonance Theory of Emotion</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴の芸術論</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴の芸術論</div>
         <div><span class="lang">USA</span>The Art Theory of External Resonance</div>
       </div>
     </div>
@@ -360,15 +320,12 @@
 
   <!-- IV. 音楽理論 -->
   <section>
-    <div class="section-label">IV. 音楽理論（出版）</div>
-    <h2>外在的共鳴の応用としての音楽理論。</h2>
+    <div class="section-label">IV. Music Theory (Published)</div>
+    <h2>The music theory developed as an application of External Resonance.</h2>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">外在的共鳴としての音楽理論の基礎構造</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>外在的共鳴としての音楽理論の基礎構造</div>
         <div><span class="lang">USA</span>The Fundamental Structure of Musical Theory as External Resonance</div>
       </div>
     </div>
@@ -376,15 +333,12 @@
 
   <!-- V. エッセイ -->
   <section>
-    <div class="section-label">V. エッセイ（出版）</div>
-    <h2>生活・愛・日常の中に現れる外在的共鳴。</h2>
+    <div class="section-label">V. Essays (Published)</div>
+    <h2>External Resonance as it appears in life, in love, and in the everyday.</h2>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">料理から自由になる</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>料理から自由になる</div>
         <div><span class="lang">USA</span>FREE YOURSELF FROM COOKING</div>
         <div><span class="lang">DEU</span>FREI WERDEN VOM KOCHEN</div>
         <div><span class="lang">FRA</span>SE LIBÉRER DE LA CUISINE</div>
@@ -394,16 +348,12 @@
         <div><span class="lang">NLD</span>VRIJ WORDEN VAN KOKEN</div>
         <div><span class="lang">TUR</span>YEMEK YAPMAKTAN ÖZGÜRLEŞMEK</div>
         <div><span class="lang">GBR</span>FREE YOURSELF FROM COOKING</div>
-        <div><span class="lang">SWE</span>BEFRIA DIG FRÅN MATLAGNING（未着手）</div>
       </div>
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">愛は、ふと立ち上がり、ふと世界を変える</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>愛は、ふと立ち上がり、ふと世界を変える</div>
         <div><span class="lang">USA</span>Love Rises Suddenly and Quietly Changes the World</div>
         <div><span class="lang">DEU</span>Die Liebe erhebt sich im Vorübergehen – und verwandelt im Vorübergehen die Welt</div>
         <div><span class="lang">FRA</span>L’amour se lève soudain, et soudain transforme le monde</div>
@@ -420,15 +370,12 @@
 
   <!-- VI. 叙事詩・文学作品 -->
   <section>
-    <div class="section-label">VI. 叙事詩・文学作品（出版）</div>
-    <h2>外在的共鳴の文学的外化としての叙事詩群。</h2>
+    <div class="section-label">VI. Epic Poetry & Literary Works (Published)</div>
+    <h2>The epic poems as the literary externalization of External Resonance.</h2>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">火の声と沈黙の詩</span>
-      </div>
       <div class="work-translations">
+        <div><span class="lang">JPN</span>火の声と沈黙の詩</div>
         <div><span class="lang">USA</span>The Voice of Fire and the Poem of Silence</div>
         <div><span class="lang">DEU</span>Die Stimme des Feuers und das Gedicht der Stille</div>
         <div><span class="lang">FRA</span>La Voix du Feu et le Poème du Silence</div>
@@ -442,34 +389,31 @@
     </div>
 
     <div class="work-group">
-      <div class="work-main">
-        <span class="label">JPN</span>
-        <span class="title-jp">レゾナンティアの風（未着手）</span>
-      </div>
       <div class="work-translations">
         <div><span class="lang">USA</span>Resonantia Wind</div>
       </div>
     </div>
 
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">天使の沈黙の下で</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">朧月の宮記</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">イデアの想起</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">存在の地平</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">永遠の現在を生きる者</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">内的実存の極</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">重力と恩寵のあいだに立つ魂</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">光点の誕生</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">永遠の持続を歩む者</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">言語の外側を探す旅</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">永遠の相の下で見る者</span></div></div>
-    <div class="work-group"><div class="work-main"><span class="label">JPN</span><span class="title-jp">帝国と砂漠</span></div></div>
+    <div class="work-group">
+      <div class="work-translations">
+        <div><span class="lang">JPN</span>天使の沈黙の下で</div>
+        <div><span class="lang">JPN</span>朧月の宮記</div>
+        <div><span class="lang">JPN</span>イデアの想起</div>
+        <div><span class="lang">JPN</span>存在の地平</div>
+        <div><span class="lang">JPN</span>永遠の現在を生きる者</div>
+        <div><span class="lang">JPN</span>内的実存の極</div>
+        <div><span class="lang">JPN</span>重力と恩寵のあいだに立つ魂</div>
+        <div><span class="lang">JPN</span>光点の誕生</div>
+        <div><span class="lang">JPN</span>永遠の持続を歩む者</div>
+        <div><span class="lang">JPN</span>言語の外側を探す旅</div>
+        <div><span class="lang">JPN</span>永遠の相の下で見る者</div>
+        <div><span class="lang">JPN</span>帝国と砂漠</div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <div class="left">
-      以上、著者自身の著書一覧。
-    </div>
-    <div class="right">
+      <a href="index.html" style="color: var(--fg-soft); text-decoration: none;">Back to Home</a><br>
       © R. Setsuna Publishing. All Rights Reserved.
     </div>
   </footer>

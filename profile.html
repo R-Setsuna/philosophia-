@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>著者プロフィール – R. Setsuna</title>
+  <title>Author Biography – R. Setsuna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #111111;
-      --fg-soft: #555555;
-      --rule: #e5e5e5;
-      --accent: #4a90e2;
-      --font-main: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
-      --font-mono: "SF Mono", Menlo, Consolas, monospace;
-    }
+
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --fg-soft: #555555;
+  --rule: #e5e5e5;
+  --accent: #4a90e2;
+  /* --font-main を以下のように変更 */
+  --font-main: "Georgia", "Times New Roman", "Hiragino Mincho ProN", "MS Mincho", serif;
+  --font-mono: "SF Mono", Menlo, Consolas, monospace;
+}
 
     body {
       margin: 0;
@@ -34,13 +36,15 @@
       text-align: center;
     }
 
-    .brand {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
+.brand {
+      /* フォントを Georgia に変更 */
+      font-family: "Georgia", serif; 
+      font-size: 0.85rem;
+      /* 字間を少し広げると、Georgia の優雅さが際立ちます */
+      letter-spacing: 0.2em; 
       color: var(--fg-soft);
-      margin-bottom: 12px;
-      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-transform: uppercase; /* ここは大文字のままの方が「ブランドロゴ」らしく見えます */
     }
 
     h1 {
@@ -54,8 +58,9 @@
       font-size: 0.95rem;
       color: var(--fg-soft);
       line-height: 1.7;
-      max-width: 32em;
+      max-width: 35em;
       margin: 0 auto;
+      font-style: italic;
     }
 
     section {
@@ -81,6 +86,7 @@
       line-height: 1.8;
       color: var(--fg-soft);
       margin-bottom: 16px;
+      text-align: justify;
     }
 
     ul {
@@ -106,112 +112,101 @@
 
   <header>
     <div class="brand">EXTERNAL RESONANCE</div>
-    <h1>著者プロフィール</h1>
-    <p class="subtitle">― 外在的共鳴哲学の著者としての存在構造 ―</p>
+    <h1>PROFILE</h1>
+    <p class="subtitle">— The Ontological Structure of the Author of External Resonance Philosophy —</p>
   </header>
 
   <section>
-    <h2>I. 外在的共鳴哲学の構築者として</h2>
+    <h2>I. As the Architect of External Resonance Philosophy</h2>
     <p>
-      R. Setsuna は、自然界・情報世界・社会世界の全領域を貫く構造を探求し、
-      外在性・共鳴・階層性を中心とする独自の哲学体系
-      「外在的共鳴哲学（External Resonance Philosophy）」を構築している思想家である。
+      R. Setsuna is a thinker who explores the structures permeating the natural, informational, and social worlds, constructing an original philosophical system centered on externality, resonance, and hierarchy: "External Resonance Philosophy."
     </p>
     <p>
-      その思索は、物理・化学・生命・地球・情報・社会・文明といった多層的領域を横断しながら、
-      それらを単一の構造原理によって統合することを目指している。
-      世界は孤立した実体の集合ではなく、外部との関係の網として立ち上がる開かれた構造である。
+      Their thought traverses multi-layered domains—physics, chemistry, biology, earth sciences, information technology, society, and civilization—aiming to integrate them through a single structural principle. The world is viewed not as a collection of isolated entities, but as an open structure that emerges as a web of relations with the exterior.
     </p>
   </section>
 
   <section>
-    <h2>II. 思想史における位置</h2>
+    <h2>II. Position in Intellectual History</h2>
     <p>
-      R. Setsuna の哲学は、20世紀以降の科学的世界観と哲学的世界観の断絶を再接続する試みとして位置づけられる。
+      R. Setsuna’s philosophy is positioned as an attempt to reconnect the disconnect between the scientific and philosophical worldviews that has persisted since the 20th century.
     </p>
     <ul>
-      <li>プロセス哲学が「生成」を中心に据えたのに対し、外在性を中心に据える。</li>
-      <li>システム論が「内部の構造化」を扱ったのに対し、外部条件の優位性を強調する。</li>
-      <li>情報哲学が「差異」を扱ったのに対し、差異が共鳴へと変換される過程を重視する。</li>
-      <li>ネットワーク科学が「構造」を扱ったのに対し、構造がどのように安定化するかを問う。</li>
+      <li>While process philosophy centers on "becoming," this system centers on "externality."</li>
+      <li>While systems theory deals with "internal structuring," this system emphasizes the primacy of external conditions.</li>
+      <li>While the philosophy of information deals with "difference," this system focuses on the process by which difference is converted into resonance.</li>
+      <li>While network science deals with "structure," this system interrogates how such structures stabilize.</li>
     </ul>
     <p>
-      このように、既存の思想潮流と接続しながらも、どれにも属さない独自の位置を占めている。
+      Thus, while engaging with existing intellectual currents, it occupies a unique position that belongs to none of them.
     </p>
   </section>
 
   <section>
-    <h2>III. 科学史における位置</h2>
+    <h2>III. Position in the History of Science</h2>
     <p>
-      外在的共鳴哲学は、現代科学の多様な領域を「外在的共鳴」という単一の視点で再統合する。
+      External Resonance Philosophy re-integrates diverse fields of modern science through the singular lens of "external resonance."
     </p>
     <ul>
-      <li>量子場理論の「場の励起」</li>
-      <li>化学の「電子雲の安定化」</li>
-      <li>生命科学の「代謝・適応・進化」</li>
-      <li>地球科学の「惑星規模の相互作用」</li>
-      <li>情報科学の「差異・計算・ネットワーク」</li>
-      <li>社会科学の「制度・文化・相互作用」</li>
+      <li>"Field excitation" in quantum field theory</li>
+      <li>"Stabilization of electron clouds" in chemistry</li>
+      <li>"Metabolism, adaptation, and evolution" in life sciences</li>
+      <li>"Planetary-scale interactions" in earth sciences</li>
+      <li>"Difference, computation, and networks" in computer science</li>
+      <li>"Institutions, culture, and interaction" in social sciences</li>
     </ul>
     <p>
-      これらは断絶した領域ではなく、共鳴のスケール変換として連続していると捉えられる。
-      R. Setsuna は、科学的知見を寄せ集めるのではなく、
-      科学そのものを“外在的共鳴の記述体系”として再定義する。
+      These are not viewed as disconnected realms, but as a continuum of resonance scale transformations. R. Setsuna does not merely collect scientific findings but redefines science itself as a "descriptive system of external resonance."
     </p>
   </section>
 
   <section>
-    <h2>IV. 文体・方法論における位置</h2>
+    <h2>IV. Position in Style and Methodology</h2>
     <p>
-      R. Setsuna の文章は、感情的表現を排し、透明・薄明・構造的・非装飾的な文体を特徴とする。
-      これは、個人的感情や主観的経験を排し、普遍的構造を直接的に記述するための方法である。
+      R. Setsuna’s writing is characterized by a style that is transparent, twilight-like, structural, and unornamented, eschewing emotional expression. This is a methodology designed to describe universal structures directly by removing personal sentiment and subjective experience.
     </p>
     <ul>
-      <li>比喩を最小限に抑える</li>
-      <li>感情語を排する</li>
-      <li>構造・関係・外部条件を中心に据える</li>
-      <li>文体そのものが哲学の一部として機能する</li>
+      <li>Minimizing metaphors</li>
+      <li>Excluding emotional vocabulary</li>
+      <li>Centering on structure, relations, and external conditions</li>
+      <li>Allowing the style itself to function as part of the philosophy</li>
     </ul>
   </section>
 
   <section>
-    <h2>V. 哲学体系の内部における著者の位置</h2>
+    <h2>V. The Author’s Place Within the Philosophical System</h2>
     <p>
-      R. Setsuna は、自身を「体系の外側に立つ作者」としてではなく、
-      外在的共鳴哲学の内部に位置する一つの共鳴単位として捉えている。
+      R. Setsuna does not view themself as an "author standing outside the system," but as a single unit of resonance located within the External Resonance Philosophy.
     </p>
     <p>
-      著者自身もまた、外部条件・歴史・文化・科学・社会との関係の中で形成される外在的存在である。
-      哲学者を「主体」ではなく、世界の構造に応答する一つの節点（node）として位置づける。
+      The author is also an external existence formed within relationships with external conditions, history, culture, science, and society. The philosopher is positioned not as a "subject," but as a node responding to the structure of the world.
     </p>
   </section>
 
   <section>
-    <h2>VI. 研究姿勢と哲学的態度</h2>
+    <h2>VI. Research Stance and Philosophical Attitude</h2>
     <ul>
-      <li>外部条件の優先</li>
-      <li>階層横断性</li>
-      <li>構造の透明化</li>
-      <li>非本質主義</li>
-      <li>開かれた体系性</li>
+      <li>Primacy of external conditions</li>
+      <li>Cross-hierarchical approach</li>
+      <li>Transparency of structure</li>
+      <li>Non-essentialism</li>
+      <li>Open systematicity</li>
     </ul>
   </section>
 
   <section>
-    <h2>VII. 著者名「R. Setsuna」の意味</h2>
+    <h2>VII. Meaning of the Pen Name "R. Setsuna"</h2>
     <p>
-      著者名は、個人的アイデンティティを前面に出すためではなく、
-      個人性を薄め、哲学的構造の透明性を保つための記号として機能する。
+      The pen name functions not to bring personal identity to the fore, but as a signifier to dilute individuality and maintain the transparency of the philosophical structure.
     </p>
     <p>
-      個人の物語ではなく構造の記述に焦点を当て、
-      著者名が作品の前に出ないようにし、
-      哲学的純度を保つための匿名性の一部として働く。
+      Focusing on the description of structure rather than personal narrative, it serves as part of an anonymity designed to prevent the author's name from preceding the work, thereby preserving philosophical purity.
     </p>
   </section>
 
   <footer>
-© R. Setsuna Publishing. All Rights Reserved. 
+     <a href="index.html" style="color: var(--fg-soft); text-decoration: none;">Back to Home</a><br>
+    © R. Setsuna Publishing. All Rights Reserved. 
   </footer>
 
 </main>

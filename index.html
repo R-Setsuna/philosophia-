@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>外在的共鳴の哲学 – R. Setsuna</title>
+  <title>The Philosophy of External Resonance – R. Setsuna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root {
@@ -11,7 +11,7 @@
       --fg-soft: #555555;
       --rule: #e5e5e5;
       --accent: #4a90e2;
-      --font-main: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+      --font-main: "Georgia", "Times New Roman", "Hiragino Mincho ProN", "MS Mincho", serif;
       --font-mono: "SF Mono", Menlo, Consolas, monospace;
     }
 
@@ -35,17 +35,19 @@
     }
 
     .brand {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
+      font-family: "Georgia", serif; 
+      font-size: 0.85rem;
+      letter-spacing: 0.2em; 
       color: var(--fg-soft);
       margin-bottom: 16px;
+      text-transform: uppercase;
     }
 
     .hero-emblem {
       width: 120px;
       height: 120px;
       margin: 0 auto 28px;
+      display: block; /* 中央寄せを確実にするため追加 */
       opacity: 0.9;
     }
 
@@ -54,14 +56,17 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       margin: 0 0 12px;
+      text-align: center; /* 明示的に追加 */
     }
 
     .subtitle {
       font-size: 0.95rem;
       color: var(--fg-soft);
       line-height: 1.7;
-      max-width: 32em;
+      max-width: 35em;
       margin: 0 auto;
+      font-style: italic;
+      text-align: center;
     }
 
     nav {
@@ -80,7 +85,8 @@
       border-bottom: 1px solid transparent;
       transition: 0.25s ease;
       letter-spacing: 0.05em;
-    }
+      text-transform: uppercase;
+    } /* ← ここが抜けていました */
 
     nav a:hover {
       border-bottom: 1px solid var(--accent);
@@ -99,39 +105,34 @@
       border-top: 1px solid var(--rule);
       font-size: 0.75rem;
       color: var(--fg-soft);
-      text-align: center;
+      text-align: center; /* これで中央に寄ります */
+      width: 100%;       /* 幅を確保 */
     }
   </style>
 </head>
-
 <body>
-<main>
 
+<main>
   <header>
     <div class="brand">EXTERNAL RESONANCE</div>
-
-    <!-- エンブレム画像 -->
-    <img src="emblem.png" alt="Emblem" class="hero-emblem">
-
-    <h1>R. Setsunaの公式ホームページ</h1>
+    <img src="emblem.jpg" alt="Emblem of External Resonance Philosophy" class="hero-emblem">
+    <h1>The Official Website of R. Setsuna</h1>
     <p class="subtitle">
-      外の風　内に響きて　たち返り<br>
-      　　　　風となりては　外へ吹きゆく
+      Winds from without, echoing within and turning back,<br>
+      Becoming the wind once more, to blow out toward the world.
     </p>
 
     <nav>
-      <a href="Greeting.html">ご挨拶</a>
-      <a href="works.html">著者自身の著書一覧</a>
-      <a href="profile.html">著者プロフィール</a>
+      <a href="Greeting.html">Greeting</a>
+      <a href="works.html">works</a>
+      <a href="profile.html">profile</a>
     </nav>
   </header>
 
-  <hr class="divider">
-
-  <footer>
+  <hr class="divider"> <footer>
     © R. Setsuna Publishing. All Rights Reserved.
   </footer>
-
 </main>
+
 </body>
 </html>
