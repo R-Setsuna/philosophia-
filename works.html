@@ -44,6 +44,7 @@
     }
 
     body {
+    background-color: #fcfcfc; /* ほんの少しだけグレーを混ぜる */
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -215,7 +216,42 @@ h3 {
   margin-top: 1.2em;
   margin-bottom: 0.4em;
 }
+/* より洗練された空気感を作るためのCSSヒント */
+body {
+  line-height: 2; /* 行間を広げ、読みやすさと高級感を出す */
+  letter-spacing: 0.03em;
+}
 
+/* フェードイン・アニメーション */
+main {
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* リンクホバーの挙動 */
+nav a {
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 
   </style>
 </head>
