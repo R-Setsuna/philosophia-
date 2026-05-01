@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>CHRONICLE – R. Setsuna</title>
 
+  <!-- スマホ対応のための viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
 :root {
   --bg: #ffffff;
@@ -21,7 +24,10 @@ body {
   color: var(--fg);
   font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
-  padding: 48px 20px 80px;
+
+  /* スマホでも読みやすい余白に */
+  padding: 48px clamp(12px, 4vw, 20px) 80px;
+
   line-height: 2;
   letter-spacing: 0.03em;
 }
@@ -106,6 +112,28 @@ footer {
   color: var(--fg-soft);
   text-align: center;
 }
+
+/* -------------------------
+   スマホ向け微調整
+-------------------------- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  p, ul li {
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
+
+  body {
+    padding: 32px 16px 60px;
+  }
+}
   </style>
 </head>
 
@@ -135,7 +163,6 @@ footer {
 
     <p><strong>Grounds for the Ending:</strong><br>
     Because the years, in their gradual approach, began to speak gently from the side of the body.</p>
-    </p>
     
   </section>
   
