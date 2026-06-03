@@ -32,22 +32,25 @@
 
     body {
       margin: 0;
-      background-color: #fcfcfc; /* ほんの少しだけグレーを混ぜる */
+      background-color: #fcfcfc;
       background: var(--bg);
       color: var(--fg);
       font-family: var(--font-main);
       -webkit-font-smoothing: antialiased;
+      line-height: 2;
+      letter-spacing: 0.03em;
     }
 
     main {
       max-width: 960px;
       margin: 0 auto;
       padding: 60px 24px 80px;
+      animation: fadeIn 1.2s ease-out;
     }
 
     header {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 48px;
     }
 
     .brand {
@@ -63,7 +66,7 @@
       width: 120px;
       height: 120px;
       margin: 0 auto 28px;
-      display: block; /* 中央寄せを確実にするため追加 */
+      display: block;
       opacity: 0.9;
     }
 
@@ -72,7 +75,7 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       margin: 0 0 12px;
-      text-align: center; /* 明示的に追加 */
+      text-align: center;
     }
 
     .subtitle {
@@ -85,6 +88,7 @@
       text-align: center;
     }
 
+    /* メインナビゲーション */
     nav {
       margin-top: 48px;
       display: flex;
@@ -98,21 +102,73 @@
       color: var(--fg);
       text-decoration: none;
       padding-bottom: 4px;
-      border-bottom: 1px solid transparent;
-      transition: 0.25s ease;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-    } /* ← ここが抜けていました */
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
 
     nav a:hover {
-      border-bottom: 1px solid var(--accent);
       color: var(--accent);
     }
 
     .divider {
       border: none;
       border-top: 1px solid var(--rule);
-      margin: 60px 0 40px;
+      margin: 40px 0;
+    }
+
+    /* ダイレクトリンク用のスタイル */
+    .works-direct-section {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .works-title {
+      font-family: "Georgia", serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      color: var(--fg);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px 24px;
+    }
+
+    .works-grid a {
+      font-size: 0.9rem;
+      color: var(--fg-soft);
+      text-decoration: none;
+      padding: 8px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .works-grid a:hover {
+      color: var(--accent);
+      background-color: #f7f7f7;
+      border-color: #eee;
     }
 
     footer {
@@ -121,45 +177,24 @@
       border-top: 1px solid var(--rule);
       font-size: 0.75rem;
       color: var(--fg-soft);
-      text-align: center; /* これで中央に寄ります */
-      width: 100%;       /* 幅を確保 */
+      text-align: center;
+      width: 100%;
     }
-    /* より洗練された空気感を作るためのCSSヒント */
-body {
-  line-height: 2; /* 行間を広げ、読みやすさと高級感を出す */
-  letter-spacing: 0.03em;
-}
 
-/* フェードイン・アニメーション */
-main {
-  animation: fadeIn 1.2s ease-out;
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* リンクホバーの挙動 */
-nav a {
-  position: relative;
-  transition: color 0.3s;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--accent);
-  transition: width 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
+    @media (max-width: 640px) {
+      .works-grid {
+        grid-template-columns: repeat(2, 1fr); /* スマホでは2列に */
+        gap: 12px;
+      }
+      .works-grid a {
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -176,12 +211,31 @@ nav a:hover::after {
 
     <nav>
       <a href="Greeting.html">Greeting</a>
-      <a href="works.html">works</a>
       <a href="profile.html">profile</a>
     </nav>
   </header>
 
-  <hr class="divider"> <footer>
+  <hr class="divider">
+
+  <!-- アメリカ英語に統一されたダイレクトリンクエリア -->
+  <section class="works-direct-section">
+    <div class="works-title">— Complete Works —</div>
+    <div class="works-grid">
+      <a href="works_treatise.html">Ⅰ. Foundational Treatise</a>
+      <a href="works_philosophy.html">Ⅱ. Core Trilogy</a>
+      <a href="works_generative.html">Ⅲ. Generative Theory</a>
+      <a href="works_fundamental.html">Ⅳ. Fundamental Philosophy</a>
+      <a href="works_human.html">Ⅴ. Human Studies</a>
+      <a href="works_aesthetics.html">Ⅵ. Aesthetics & Music</a>
+      <a href="works_defense.html">Ⅶ. Defense Theory</a>
+      <a href="works_essays.html">Ⅷ. Essays</a>
+      <a href="works_poetry.html">Ⅸ. Epic Poetry</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <footer>
     In pursuit of philosophy since 1973<br>
     ORCID: 0009-0005-4578-1626<br>
     © R. Setsuna Publishing. All Rights Reserved.<br>
