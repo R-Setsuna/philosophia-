@@ -171,6 +171,13 @@
       border-color: #eee;
     }
 
+    /* PC表示（3列）のとき、10番目の項目（Language Summary）を中央に配置する調整 */
+    @media (min-width: 641px) {
+      .works-grid a:nth-child(10) {
+        grid-column: 2;
+      }
+    }
+
     footer {
       margin-top: 60px;
       padding-top: 20px;
@@ -188,7 +195,7 @@
 
     @media (max-width: 640px) {
       .works-grid {
-        grid-template-columns: repeat(2, 1fr); /* スマホでは2列に */
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
       }
       .works-grid a {
@@ -212,12 +219,13 @@
     <nav>
       <a href="Greeting.html">Greeting</a>
       <a href="profile.html">profile</a>
+      <a href="lang-summary.html">Summary</a>
     </nav>
   </header>
 
   <hr class="divider">
 
-  <!-- アメリカ英語に統一されたダイレクトリンクエリア -->
+  <!-- ダイレクトリンクエリア -->
   <section class="works-direct-section">
     <div class="works-title">— Complete Works —</div>
     <div class="works-grid">
@@ -230,6 +238,7 @@
       <a href="works_defense.html">Ⅶ. Defense Theory</a>
       <a href="works_essays.html">Ⅷ. Essays</a>
       <a href="works_poetry.html">Ⅸ. Epic Poetry</a>
+      <a href="lang-summary.html">Ⅹ. Language Summary</a>
     </div>
   </section>
 
